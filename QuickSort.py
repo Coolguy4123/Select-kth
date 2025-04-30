@@ -26,14 +26,16 @@ def partition(A, low, high):
 
 
 if __name__ == '__main__':
-    N = 5
-    k = 2
+    N = 2
+    k = 1
     arr = []
 
     gen_lst(arr,N)
-    print(arr)
 
+    start = time.time()
     quickSort(arr,0,N-1)
-    print(arr)
+    return_kth(arr,k)
+    timeElapsed = time.time() - start
 
-    print(f"{k}th smallest element: {return_kth(arr,k)}")
+    print(f"---Time elapsed = {timeElapsed} seconds")
+    print(f"\n{k}th smallest element: {return_kth(arr,k)}\n")

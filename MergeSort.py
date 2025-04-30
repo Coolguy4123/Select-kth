@@ -39,16 +39,16 @@ def mergeSort(A,low,high):
         merge(A, low, mid, high)
 
 if __name__ == '__main__':
-    N = 5
-    k = 2
+    N = 2
+    k = 1
     arr = []
 
-    print("\nMerge Sort")
-    print("------------------------")
-    # gen_lst(arr,N)
-    arr = [27,71,45,76,1]
-    print(f"Original Array: {arr}")
+    gen_lst(arr,N)
 
+    start = time.time()
     mergeSort(arr,0,N-1)
-    print(f"Sorted Array: {arr}")
+    return_kth(arr,k)
+    timeElapsed = time.time() - start
+
+    print(f"---Time elapsed = {timeElapsed} seconds")
     print(f"\n{k}th smallest element: {return_kth(arr,k)}\n")
