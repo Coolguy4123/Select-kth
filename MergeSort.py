@@ -39,14 +39,16 @@ def mergeSort(A,low,high):
         merge(A, low, mid, high)
 
 if __name__ == '__main__':
-    N = 20
-    k = 2  # k must be <= N
+    N = 5
+    k = 2
     arr = []
 
-    gen_lst(arr,N)
-    print(arr)
+    print("\nMerge Sort")
+    print("------------------------")
+    # gen_lst(arr,N)
+    arr = [27,71,45,76,1]
+    print(f"Original Array: {arr}")
 
     mergeSort(arr,0,N-1)
-    print(arr)
-
-    print(f"{k}th smallest element: {return_kth(arr,k)}")
+    print(f"Sorted Array: {arr}")
+    print(f"\n{k}th smallest element: {return_kth(arr,k)}\n")
