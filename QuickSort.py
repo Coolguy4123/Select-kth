@@ -22,7 +22,7 @@ def partition(A, low, high):
             A[i],A[j] = A[j], A[i]
     pivotPos = j
     A[low],A[pivotPos] = A[pivotPos], A[low]
-    return j+1
+    return j
 
 
 if __name__ == '__main__':
