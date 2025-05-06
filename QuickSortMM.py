@@ -1,6 +1,5 @@
 import random
 import time
-import math
 
 #------------------------------------------------------------------------------------
 #---Generates a an array with size N filled with values between 0 to 100 inclusive---
